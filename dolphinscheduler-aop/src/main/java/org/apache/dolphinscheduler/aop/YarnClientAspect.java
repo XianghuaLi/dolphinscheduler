@@ -88,6 +88,6 @@ public class YarnClientAspect {
             +
             "&& !within(YarnClientAspect) && execution(ApplicationReport org.apache.hadoop.yarn.client.api.impl.YarnClientImpl.getApplicationReport(ApplicationId)) && args(appId)", returning = "appReport", argNames = "appReport,appId")
     public void registerApplicationReport(ApplicationReport appReport, ApplicationId appId) {
-        currentApplicationReport = appReport;
+        currentApplicationReport = appReport; // TEST submmit
     }
 }
